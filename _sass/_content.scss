@@ -1,0 +1,121 @@
+.page-text {
+    padding: 1em;
+    h1 {
+        color: $brand-yellow;
+    }
+    h2 {
+        color: $brand-color;
+    }
+    h3, h4, h5 {
+        color: $brand-yellow;
+    }
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+    ul {
+        margin-left: 30px;
+    }
+    img {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        box-shadow: 5px 5px 3px #888888;
+    }
+    .embedmap {
+        box-shadow: 5px 5px 3px #888888;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    a {
+        color: $brand-yellow;
+    }
+}
+
+.split {
+   overflow: hidden;
+   position: relative;
+   padding: 1em;
+   @include media-query($on-palm) {
+       overflow: visible;
+   }
+}
+
+.split-left {
+    margin-top: 1em;
+    text-align: left;
+    width: 15%;
+    float: left;
+    @include media-query($on-palm) {
+        width: auto;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+.split-right {
+    padding-top: 1em;
+    margin-top: 1em;
+    text-align: center;
+    overflow: hidden;
+    float: right;
+    width: 85%;
+    @include media-query($on-palm) {
+        width: auto;
+        float: none;
+    }
+}
+
+.message {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
+    text-align: left;
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+.countdownbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.countdowncal {
+    @include media-query($on-palm) {
+        vertical-align: middle;
+        height: 100px;
+       display: inline-table;
+    }
+}
+
+.countdowntext {
+    text-align: left;
+    @include media-query($on-palm) {
+        padding-top: 2em;
+        vertical-align: middle;
+        height: 100px;
+       display: inline-table;
+    }
+}
+
+.countdowntext .value {
+}
+
+.countdowntext .unit {
+    text-transform: uppercase;
+    color: #AAA;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrapper">
+    <nav class="site-nav">
+    {% assign pages = site.pages | sort:"weight"  %}
+    {% for p in pages | sort: "weight" %}
+    {% if p.title %}
+        {% assign current = nil %}
+        {% if page.url contains p.url %}
+            {% assign current = 'current' %}
+        {% endif %}
+        <span class="{% if current %}current{% endif %}">
+            <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        </span>
+    {% endif %}
+    {% endfor %}
+  </div>
+</header>

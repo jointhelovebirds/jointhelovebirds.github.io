@@ -1,10 +1,76 @@
-<html>
-<head>
-<title>JoinTheLoveBirds</title>
-</head>
-<body>
-<center>
-<img src="images/logo.png" alt="logo" />
-</center>
-</body>
-</html>
+---
+layout: default
+title: The Couple
+weight: 0
+---
+<div class="home">
+    <!--<div>Is: <span id="countdown"></span></div>-->
+  <img src="/images/welcome.png" />
+  <!--
+  <h1 class="page-heading">Posts</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+   -->
+  <div class="wrapper">
+  <div class="split">
+  <div class="split-left">
+      <div class=countdownbox>
+        <div class="countdowncal"><a href="/files/event.ics"><img src="images/cal.png" /></a></div>
+        <div class="countdowntext"><span id="countdown"></span></div>
+      </div>
+  </div>
+  <div class="split-right">
+      <div class="message">
+          <p>Hello dear family and friends!</p>
+          <p>Welcome to our wedding website! This is the place you will find
+          the latest wedding information. It's not just a walk down the street,
+          so we are very appreciative if you will be able to join us this
+          summer at Lluis’s home country of Catalunya. Mark your calendars,
+          because we look forward to celebrate this very special day with us
+          you. We look forward to drinking some fine wine and snacking on tapas
+          with you.</p>
+          <p>Love,<br/>Channey & Lluis</p>
+  </div>
+  </div>
+  </div>
+  <script>
+    function setcountdown() {
+        var end = 1438434000000;
+        var now = (new Date).getTime();
+        var left = end - now;
+        var countdown = "";
+        if (left > 0) {
+            var div = 1000 * 3600 * 24
+            var days = Math.floor(left / div);
+            left = left % div;
+            div /= 24;
+            var hours = Math.floor(left / div);
+            left = left % div;
+            div /= 60;
+            var mins = Math.floor(left / div);
+            left = left % div;
+            div /= 60;
+            var secs = Math.floor(left / div);
+            countdown += "<span class=\"value\">" + days + "</span> <span class=\"unit\">days</span></span><br/>";
+            countdown += "<span class=\"value\">" + hours + "</span> <span class=\"unit\">hours</span></span><br/>";
+            countdown += "<span class=\"value\">" + mins + "</span> <span class=\"unit\">minutes</span></span><br/>";
+            countdown += "<span class=\"value\">" + secs + "</span> <span class=\"unit\">seconds</span></span><br/>";
+        }
+        document.getElementById("countdown").innerHTML = countdown;
+        setTimeout(setcountdown, 1000);
+    }
+    setcountdown();
+  </script>
+
+</div>
